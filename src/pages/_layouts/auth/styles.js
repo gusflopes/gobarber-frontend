@@ -52,7 +52,7 @@ export const Content = styled.div`
     font-size: 16px;
     transition: background 0.2s;
 
-    &:hover: {
+    &:hover {
       background: ${darken(0.03, '#3b9eff')};
     }
   }
