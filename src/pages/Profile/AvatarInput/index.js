@@ -18,7 +18,7 @@ export default function AvatarInput() {
       ref: ref.current,
       path: 'dataset.file',
     });
-  }, [ref, registerField]);
+  }, [ref.current]); //eslint-disable-line
 
   async function handleChange(e) {
     const data = new FormData();
