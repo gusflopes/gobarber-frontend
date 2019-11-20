@@ -25,15 +25,25 @@ export default function Notifications() {
   );
 
   const user = useSelector(state => state.user.profile);
-  console.log(user);
 
+  // console.log(user);
+
+  /** *
+   * Fix Socket IO
+   */
+  /*
   const socket = useMemo(
     () =>
-      socketio('http://localhost:3333', {
-        query: {
-          user_id: user.id,
-        },
-      }),
+      socketio(
+        process.env.REACT_APP_API_ENV === 'remote'
+          ? process.env.REACT_APP_API_REMOTE
+          : process.env.REACT_APP_API_LOCAL,
+        {
+          query: {
+            user_id: user.id,
+          },
+        }
+      ),
     [user.id]
   );
 
@@ -42,6 +52,7 @@ export default function Notifications() {
       setNotifications([notification, ...notifications]);
     });
   }, [socket, notifications]);
+  */
 
   useEffect(() => {
     async function loadNotifications() {

@@ -10,7 +10,6 @@ import {
   isBefore,
   isEqual,
   parseISO,
-  endOfDay,
 } from 'date-fns';
 import { utcToZonedTime } from 'date-fns-tz';
 import pt from 'date-fns/locale/pt';
