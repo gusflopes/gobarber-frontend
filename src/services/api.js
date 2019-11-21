@@ -1,10 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL:
-    process.env.REACT_APP_API_ENV === 'remote'
-      ? process.env.REACT_APP_API_REMOTE
-      : process.env.REACT_APP_API_LOCAL,
+  baseURL: 'http://localhost:3333',
 });
 
 export default api;
